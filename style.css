@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial";
+}
+
+.header {
+  text-align: center;
+  min-width: 600px;
+  padding-top: 16px;
+  margin: auto;
+}
+
+.homepage {
+
+}
+
+.title {
+  font-size: 36px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+.navigation {
+  padding-top: 12px;
+
+}
+
+.navigation a {
+  font-size: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+.navigation a:link {
+  
+}
+
+.navigation a:visited {
+  
+}
+
+.navigation a:hover {
+  color: #6a6a6a;
+}
+
+.navigation a.active {   /* not the CSS active */
+  color: #267326;
+  text-shadow: 1px 1px #d9f2d9;
+}
+
+.container {
+
+}
+
+.content-wrapper {
+  margin-top: 64px;
+  /*changing the height moves the nav bar for some reason*/
+  height: 1080px;
+}
+
+.slideshow {
+  width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.slide-img {
+  display: block;
+  width: 100%;
+}
+
+.gallery {
+  width: 1080px;
+  height: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 16px;
+  border-top-style: solid;
+  border-color: #bfbfbf;
+  border-width: 2px;
+}
+
+.gallery-main {
+  width: 600px;
+  height: 820px;
+  position: relative;
+  margin: auto;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+}
+
+.gallery-nav {
+  height: 140px;
+  width: 700px;
+  margin: auto;
+  margin-top: 32px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.gallery-icon {
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  display: inline-block;
+}
+
+.gallery-buttons {
+  height: auto;
+}
+
+.prev-button, .next-button {
+  font-size: 3em;
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  color: #404040;
+}
+
+.next-button {
+  right: 0;
+}
+
+.prev-button:hover, .next-button:hover {
+  color: #267326;
+}
+
+.gallery-buttons .prev-button, .gallery-buttons .next-button{
+  top: 35%;
+}
+
+.highlight {
+  border-color: #000000;
+}
+
+.footer {
+  bottom: 0;
+}
+
+.footer-left {
+  width: 80%;
+  margin: auto;
+}

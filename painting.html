@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  	<title>Painting | Gina Werfel</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <a class="title" href="./index.html">Gina Werfel</a>
+      <div class="container">
+      	<nav class="navigation">
+      	  <a href="./painting.html" class="active">Painting</a>
+      	  <a href="./paper.html">Paper</a>
+      	  <a href="./public art.html">Public Art</a>
+      	  <a href="./archive.html">Archive</a>
+      	  <a href="./reviews.html">Reviews</a>
+      	  <a href="./catalogue.html">Catalogue</a>
+      	  <a href="./about.html">About</a>
+      	</nav>
+      </div>
+    </header>
+
+    <!-- Content wrapper pads the margins from the header and footer -->
+    <div class="content-wrapper">
+      <!-- Gallery container -->
+      <div class="gallery">
+        <!-- Gallery container for images -->
+        <div class="gallery-main">
+          <!-- Gallery images -->
+          <img class="gallery-img" src="./images/current work/Galaxy.jpg">
+          <img class="gallery-img" src="./images/current work/Gina Cooler-2.jpg">
+          <img class="gallery-img" src="./images/current work/Gina Cooler-11.jpg">
+          <img class="gallery-img" src="./images/current work/Gina Cooler-16.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9349.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9362.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9364.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9369.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9383.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9387.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9405.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9416.jpg">
+          <img class="gallery-img" src="./images/current work/IMG_9452.jpg">
+          <img class="gallery-img" src="./images/current work/Borders.jpg">
+        </div>
+        <!-- Gallery container for the main buttons that go to the next image -->
+        <div class="gallery-buttons">
+          <a class="prev-button" onclick="plusImg(-1)">❮</a>
+          <a class="next-button" onclick="plusImg(1)">❯</a>
+        </div>
+        <!-- Gallery container for the bottom navigation-->
+        <!-- Click an image to jump to it, use overflow to scroll through them -->
+        <div class="gallery-nav">
+          <!--div class="gallery-buttons">
+            
+          </div-->
+          <!-- Gallery navigation icon buttons -->
+          <img class="gallery-icon" onclick="currentImg(1)" src="./images/current work/icons/Galaxy icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(2)" src="./images/current work/icons/Gina Cooler-2 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(3)" src="./images/current work/icons/Gina Cooler-11 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(4)" src="./images/current work/icons/Gina Cooler-16 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(5)" src="./images/current work/icons/IMG_9349 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(6)" src="./images/current work/icons/IMG_9362 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(7)" src="./images/current work/icons/IMG_9364 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(8)" src="./images/current work/icons/IMG_9369 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(9)" src="./images/current work/icons/IMG_9383 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(10)" src="./images/current work/icons/IMG_9387 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(11)" src="./images/current work/icons/IMG_9405 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(12)" src="./images/current work/icons/IMG_9416 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(13)" src="./images/current work/icons/IMG_9452 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(14)" src="./images/current work/icons/Borders icon.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Call the gallery script -->
+    <script src="gallery script.js"></script>
+
+    <!-- Page footer for copyright and social media info -->
+    <footer class="footer">
+      <div class="footer-left">
+        <p>&copy Gina Werfel</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
