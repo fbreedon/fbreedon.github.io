@@ -15,7 +15,7 @@
       <div class="container">
       	<nav class="navigation">
       	  <a href="./painting.php" class="active">Painting</a>
-      	  <a href="./paper.html">Work On Paper</a>
+      	  <a href="./paper.html">Works On Paper</a>
       	  <a href="./public art.html">Public Art</a>
       	  <a href="./archive.html">Archive</a>
       	  <!--a href="./reviews.html">Publications</a-->
@@ -126,8 +126,8 @@
                  $icon_extension == 'gif' || $icon_extension == 'bmp') {
           ?>
                 <img class="gallery-icon" 
-                     onclick="currentImg(<?php echo $count ?>)" 
-                     src="<?php echo $icon_file_path; ?>" />
+                  onclick="currentImg(<?php echo $count ?>)" 
+                  src="<?php echo $icon_file_path; ?>" />
                 <?php
                 // Increment the count
                 $count++;
