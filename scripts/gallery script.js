@@ -2,8 +2,10 @@
 var imgIndex = 1;
 var gallery = document.getElementsByClassName("gallery-container")[0];
 var grid = document.getElementsByClassName("gallery-grid-container")[0];
+var meta = document.getElementsByClassName("meta-panel")[0];
 var x = document.getElementsByClassName("gallery-img");
 var info = document.getElementsByClassName("info");
+var curr = gallery;
 
 // Listen for screen size changes and run the script when necessary
 var size = window.matchMedia("(max-width: 800px)");
@@ -27,19 +29,23 @@ function scriptListener(size) {
 function plusImg(n) {
 	fadeOut();
 	fadeIn(imgIndex += n);
+	showInfo();
 	setTimeout(hideImgs, 200);
 }
 
 // Take in an integer and set the image index equal to it
 // Used to jump to an image
 function currentImg(n) {
+	curr = gallery;
 	showImgs(imgIndex = n);
 }
 
 // Show the responsive image grid when clicking on the center control
 // overlay and hide the image gallery
 function showGrid() {
+	curr = grid;
 	gallery.style.display = "none";
+	meta.style.display = "none";
 	grid.style.display = "block";
 }
 
@@ -48,11 +54,15 @@ function showGrid() {
 function showImgs(n) {
 	var i;
 
-	// Set the gallery container to display if it has been hidden by the grid
-	// and hide the grid
-	if(gallery.style.display === "none") {
+	// Display the current view
+	if (curr === gallery) {
 		gallery.style.display = "block";
+		meta.style.display = "block";
 		grid.style.display = "none";
+	} else if (curr === grid) {
+		gallery.style.display = "none";
+		meta.style.display = "none";
+		grid.style.display = "block";
 	}
 
 	// Loop back to the first image when clicking next on the last image
@@ -68,30 +78,24 @@ function showImgs(n) {
 		x[i].className = x[i].className.replace(" fade-out", "");
 	}
 
+	// Call the showInfo function to display the image's information
+	showInfo();
+
 	// Make the current image visible
 	x[imgIndex-1].style.visibility = "visible";
+}
 
-	/* === OLD CODE THAT DOESN'T WORK WITH ANIMATIONS === */
-	// I might still need this code when I add image infos
-
-	// Set the display value for each image to "none"
-	/*for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-	}*/
-
+// Helper function to display the current image's meta information
+function showInfo () {
 	// Set the display value for each info to "none"
-	// This is a seperate function in case there is no info
-	/*if(info.length > 0) {
+	if(info.length > 0) {
 		for (i = 0; i < info.length; i++) {
 			info[i].style.display = "none";
 		}
-	}*/
-
-	// Set the current image's display value to "block"
-	//x[imgIndex-1].style.display = "block";
-	// Check that there is info, 
-	// then set the current image's info display value to "block"
-	//if(info.length > 0) {info[imgIndex-1].style.display = "block";}
+	}
+	
+	// Check that there is info, then display the current image's info
+	if(info.length > 0) {info[imgIndex-1].style.display = "block";}
 }
 
 // Undo the showImgs and showGrid functions
@@ -105,6 +109,9 @@ function mobileImgs() {
 		gallery.style.display = "block";
 		grid.style.display = "none";
 	}
+	
+	// Always hide the meta panel
+	meta.style.display = "none";
 
 	// Make all the images visible for the mobile view
 	for (i = 0; i < x.length; i++) {

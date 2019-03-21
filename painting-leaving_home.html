@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="" type="">
+    <link rel="shortcut icon" href="" type="">
+    <link rel="apple-touch-icon" href="" type="">
+  	<meta property="og:image:url" content="">
+  	<meta property="og:image:width" content="">
+  	<meta property="og:image:height" content="">
+  	<meta property="og:type" content="website">
+  	<meta property="og:url" content="">
+  	<meta property="og:title" content="">
+  	<meta property="og:description" content="">
+  	<meta property="fb:app_id" content="">
+  	<title>Painting - Leaving Home | Brenda Louie</title>
+  </head>
+
+  <body>
+    
+    <!-- Navigation sidebar container -->
+    <div class="sidebar-container">
+      <a href="./" class="title">Brenda Louie</a>
+      <!-- Responsive icon for mobile -->
+      <a href="javascript:void(0);" class="nav-icon" onclick="clickIcon()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <!-- Navigation sidebar links -->
+      <nav class="sidebar-navigation" id="navigation-id">
+
+        <!-- Painting sidebar collapsible -->
+        <a class="collapsible active" id="default">Painting</a>
+        <section class="sub-sidebar">
+          <a href="./painting-river_dancing.html">River Dancing (1991-1993)</a>
+          <a href="./painting-leaving_home.html" class="active">Leaving Home (1993-1995)</a>
+          <a href="./painting-garden.html">Garden (1995-2002)</a>
+          <a href="./painting-flowers_from_the_sky.html">Flowers from the Sky (2007-Present)</a>
+          <a href="./painting-the_garden_under_the_troubled_waters.html">The Garden Under the Troubled Waters (2010) </a>
+          <a href="./painting-the_rivers_united_series.html">The Rivers United (2012-Present)</a>
+        </section>
+
+        <!-- Drawing sidebar collapsible -->
+        <a class="collapsible">Drawing</a>
+        <section class="sub-sidebar">
+          <a href="./drawing-leaving_home.html">Leaving Home (1993-1995)</a>
+          <a href="./drawing-mapping_of_memories.html">Mapping of Memories (1996-2001)</a>
+        </section>
+
+        <!-- Mixed Medium sidebar collapsible -->
+        <a class="collapsible">Mixed Medium Art Installation</a>
+        <section class="sub-sidebar">
+          <a href="./mixed-reflection_on_things_at_hand.html">Reflection on Things at Hand</a>
+          <a href="./mixed-mapping_of_foot_journey.html">Mapping of Foot Journey</a>
+          <a href="./mixed-window_inside_outside.html">Window: Inside/Outside</a>
+          <a href="./mixed-book_of_zero.html">Book of Zero (2004-2012)</a>
+          <a href="./mixed-white_wedding.html">White Wedding</a>
+        </section>
+
+        <!-- About sidebar collapsible -->
+        <a class="collapsible">About</a>
+        <section class="sub-sidebar">
+          <a href="./about-biography.html">Biography</a>
+          <a href="./about-resume.html">Resume</a>
+          <a href="./about-news.html">News</a>
+        </section>
+
+        <!-- Non-collapsible links -->
+        <a href="./video.html">Video</a>
+        <a href="./publication.html">Publication</a>
+        <a href="./link.html">Link</a>
+
+      </nav>
+    </div>
+
+    <!-- Main content container to set the screen dimensions -->
+    <div class="content-container">
+      <!-- Image gallery container for setting margins -->
+      <div class="gallery-container">
+        <!-- Image gallery overlay controls -->
+        <div class="overlay-control-left" onclick="plusImg(-1)"></div>
+        <div class="overlay-control-center" onclick="showGrid()"></div>
+        <div class="overlay-control-right" onclick="plusImg(1)"></div>
+        <!-- Image gallery pictures -->
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1254.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1263.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1285.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1287.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1425.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1426.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1427.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1520.JPG">
+        <img class="gallery-img" src="./images/painting/Leaving Home/IMG_1521.JPG">
+      </div>
+      <!-- Image grid container for setting dimensions and overflow -->
+      <div class="gallery-grid-container">
+        <!-- Image row to set up the flexbox -->
+        <div class="gallery-grid-row">
+          <!-- First image column -->
+          <div class="gallery-grid-column">
+            <img src="./images/painting/Leaving Home/IMG_1254.JPG" onclick="currentImg(1)">
+            <img src="./images/painting/Leaving Home/IMG_1425.JPG" onclick="currentImg(5)">
+            <img src="./images/painting/Leaving Home/IMG_1521.JPG" onclick="currentImg(9)">
+          </div>
+          <!-- Second image column -->
+          <div class="gallery-grid-column">
+            <img src="./images/painting/Leaving Home/IMG_1263.JPG" onclick="currentImg(2)">
+            <img src="./images/painting/Leaving Home/IMG_1426.JPG" onclick="currentImg(6)">
+          </div>
+          <!-- Third image column -->
+          <div class="gallery-grid-column">
+            <img src="./images/painting/Leaving Home/IMG_1285.JPG" onclick="currentImg(3)">
+            <img src="./images/painting/Leaving Home/IMG_1427.JPG" onclick="currentImg(7)">
+          </div>
+          <!-- Fourth image column -->
+          <div class="gallery-grid-column">
+            <img src="./images/painting/Leaving Home/IMG_1287.JPG" onclick="currentImg(4)">
+            <img src="./images/painting/Leaving Home/IMG_1520.JPG" onclick="currentImg(8)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Image meta information and controls container -->
+    <div class="meta-panel">
+      <!-- Information for each image -->
+      <div class="meta-info">
+        <div class="info">image 01<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 02<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 03<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 04<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 05<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 06<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 07<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 08<br>dimensions<br>medium<br>year</div>
+        <div class="info">image 09<br>dimensions<br>medium<br>year</div>
+      </div>
+      <!-- Gallery controls -->
+      <div class="meta-controls">
+        <div onclick="plusImg(-1)">< Prev</div>
+        <span> / </span>
+        <div onclick="plusImg(1)">Next ></div>
+      </div>
+      <!-- Thumbnail image grid toggle -->
+      <div class="meta-toggle" onclick="showGrid()">Show Thumbnails</div>
+    </div>
+
+    <!-- Call the script for the mobile navigation icon -->
+    <script src="scripts/navigation icon script.js"></script>
+
+    <!-- Call the script for the sidebar collapsibles -->
+    <script src="scripts/collapsible script.js"></script>
+
+    <!-- Call the script for the image gallery -->
+    <script src="scripts/gallery script.js"></script>
+
+  </body>
+</html>
