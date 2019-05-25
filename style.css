@@ -1,13 +1,30 @@
 /* CSS DIRECTORY
   1. = GLOBAL
-  2. = HOMEPAGE
-
+  2. = NAVIGATION
+  3. = GENERAL
+  4. = GALLERY GRID
+  5. = HOMEPAGE
+  6. = ABOUT
+  7. = PUBLICATIONS
+  8. = VIDEO
+  9. = LECTURES
+  10. = TOURS
+  11. = ANIMATIONS
+  12. = MOBILE
+  13. = ICON CLOSED
+  14. = ICON OPEN
+	15. = MOBILE GENERAL
 */
 
 /* === GLOBAL === */
 
 * {
   box-sizing: border-box;
+}
+
+html {
+	/* stops the scrollbar from moving content */
+	margin-left: calc(100vw - 100%);
 }
 
 body {
@@ -20,6 +37,7 @@ header {
 }
 
 nav {
+
 }
 
 footer {
@@ -27,15 +45,20 @@ footer {
 }
 
 h1 {
-
+	color: #7a00cc
 }
 
 h2 {
-
+	color: #333333
 }
 
 p {
+	color: #808080;
+	margin-top: 0;
+}
 
+ul {
+	color: #808080
 }
 
 /* === NAVIGATION === */
@@ -76,9 +99,10 @@ p {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   padding: 0 0 0 32px;
+  width: 100%;
 }
 
 .title {
@@ -89,25 +113,39 @@ p {
   color: #7a00cc;
 }
 
+/* === GENERAL === */
+
 .window-container {
 	display: block;
 	position: relative;
 	margin: auto;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	overflow: auto;
 }
 
-.window-container img {
+.content-container {
+	margin: auto;
+	margin-top: 32px;
+	padding: 28px 48px 48px 48px;
+	max-width: 1096px;
+	max-height: 100%;
+}
+
+.content-container h2 {
+	margin: 0 0 24px 0;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+.content-container img:not(.grid-img) {
 	display: block;
 	vertical-align: middle;
 	margin: auto;
-	padding: 64px 15% 0 15%;
+	padding: 0 10% 28px 10%;
 	max-width: 85%;
 	max-height: 85%;
 }
-
-/* === HOMEPAGE === */
 
 .slideshow-container {
   margin: auto;
@@ -126,7 +164,7 @@ p {
 
 .text-container {
 	margin: auto;
-	padding: 28px 48px 48px 48px;
+	padding: 0 48px 48px 48px;
 	max-width: 1000px;
 	max-height: 100%;
 }
@@ -135,22 +173,87 @@ p {
 	font-size: 1.05em;
 }
 
-/* === VIDEOS === */
-
-.content-container {
-	margin: auto;
-	padding: 28px 48px 48px 48px;
-	max-width: 1000px;
-	max-height: 100%;
+.text-container u {
+	text-decoration: underline;
 }
 
-.content-container h3 {
+.caption-text {
 	text-align: center;
-	margin: 64px 0 24px 0;
+	font-style: italic;
+	font-size: .95em;
+	color: #999999;
+	padding-bottom: 24px;
+	max-width: 696px;
+	margin: auto;
+}
+
+/* === GALLERY GRID === */
+
+.grid-container {
+	display: grid;
+	grid-gap: 32px 16px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: 400px;
+	justify-items: center;
+}
+
+.grid-img {
+	max-width: 100%;
+	max-height: 80%;
+}
+
+.grid-item p {
+	text-align: center;
+	font-size: .9em;
+	padding-top: 8px;
+}
+
+/* === HOMEPAGE === */
+
+.homepage img {
+	padding: 0 0 28px 0;
+}
+
+/* === ABOUT === */
+
+.about h2 {
+	text-align: left;
+	padding-left: 48px;
+}
+
+.about .image-container {
+	float: right;
+	padding: 4px 0 28px 5%;
+	max-width: 400px;
+}
+
+.about .image-container img {
+	padding: 0 0 16px 0;
+}
+
+/* === PUBLICATIONS === */
+
+.publication-box {
+	text-align: center;
+}
+
+.publication-box p {
+	font-style: italic;
+}
+
+/* === VIDEOS === */
+
+.videos h2 {
+	text-align: center;
+}
+
+.videos h2:not(:first-of-type) {
+	margin-top: 24px;
 }
 
 .youtube-wrapper {
 	position: relative;
+	margin-bottom: 64px;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
@@ -163,6 +266,18 @@ p {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+/* === LECTURES === */
+
+.text-container ul {
+	list-style-type: none;
+}
+
+/* === TOURS === */
+
+.tours img {
+	padding: 0 0 28px 0;
 }
 
 /* === ANIMATIONS === */
@@ -207,6 +322,7 @@ p {
 	}
 
 	.navigation-header .title {
+		display: inline-block;
 	  font-size: 2em;
 	  letter-spacing: 3px;
 	  padding-right: 28px;
@@ -220,7 +336,7 @@ p {
 	  padding: 24px 24px 0 0;
 	}
 
-	.navigation a{
+	.navigation a {
 		margin: 10px 0 10px 8px;
 		text-align: center;
 		font-size: 1.1em;
@@ -239,22 +355,52 @@ p {
 		display: block;
 	}
 
-	/* === MOBILE HOMEPAGE === */
+	/* === MOBILE GENERAL === */
 
-	.window-container img {
-		padding: 0 5% 0 5%;
+	.content-container img:not(.grid-img),
+	.about img,
+	.tours img {
+		float: none;
+		padding: 0 5% 16px 5%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 
 	.text-container {
-		padding: 28px 28px 28px 28px; 
+		padding: 0 16px 28px 16px; 
 	}
 
 	.content-container {
 		padding: 0 0 48px 0;
+		margin-top: 0;
 	}
 
-	.content-container h3:first-of-type {
-		margin: 0 0 24px 0;
+	.content-container h2 {
+		margin: 16px 0 24px 0;
+	}
+
+	.about .image-container {
+		float: none;
+		margin: auto;
+		padding: 0 0 16px 0;
+	}
+
+	.about h2 {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	.videos h2:first-of-type {
+		margin-top: 0;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	.navigation-header .title {
+	  font-size: 1.8em;
+	  letter-spacing: 2px;
 	}
 
 }
