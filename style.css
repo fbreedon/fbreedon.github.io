@@ -16,9 +16,21 @@
 	15. = MOBILE GENERAL
 */
 
+/* COLORS
+	- title/headers				#00ace6
+	- navigation					#808080
+	- active navigation		#0066ff
+	- hover								#bfbfbf
+	- body text 					#808080
+	- caption text 				#999999
+	- video headers				#333333
+
+*/
+
 /* === GLOBAL === */
 
 * {
+  font-family: 'Nunito Sans', sans-serif;
   box-sizing: border-box;
 }
 
@@ -28,7 +40,6 @@ html {
 }
 
 body {
-  font-family: "Arial";
   margin: 0;
 }
 
@@ -45,11 +56,19 @@ footer {
 }
 
 h1 {
-	color: #7a00cc
+	color: #7a00cc;
 }
 
 h2 {
-	color: #333333
+	color: #333333;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #00ace6;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.4em;
 }
 
 p {
@@ -58,7 +77,11 @@ p {
 }
 
 ul {
-	color: #808080
+	color: #808080;
+}
+
+ul li {
+	list-style-type: disc;
 }
 
 /* === NAVIGATION === */
@@ -78,31 +101,25 @@ ul {
 
 .navigation {
   text-align: center;
-  padding-top: 32px;
+  padding-top: 8px;
 }
 
 .navigation a {
-	font-size: 1.5em;
-	letter-spacing: 2px;
-	text-decoration: none;
-	color: #333333;
-	margin: 0 16px;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	color: #808080;
+	margin: 0 8px;
 }
 
 .navigation a.active {
-	color: #8a00e6;
+	color: #0066ff;
   text-shadow: 1px 1px #d9cde4;
 }
 
 .navigation a:hover:not(.active) {
-	color: #8c8c8c;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  padding: 0 0 0 32px;
-  width: 100%;
+	color: #bfbfbf;
 }
 
 .title {
@@ -110,7 +127,14 @@ ul {
   font-size: 2.3em;
   letter-spacing: 4px;
   text-decoration: none;
-  color: #7a00cc;
+  color: #00ace6;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 0 32px;
+  width: 100%;
 }
 
 /* === GENERAL === */
@@ -126,7 +150,7 @@ ul {
 
 .content-container {
 	margin: auto;
-	margin-top: 32px;
+	margin-top: 16px;
 	padding: 28px 48px 48px 48px;
 	max-width: 1096px;
 	max-height: 100%;
@@ -140,7 +164,6 @@ ul {
 
 .content-container img:not(.grid-img) {
 	display: block;
-	vertical-align: middle;
 	margin: auto;
 	padding: 0 10% 28px 10%;
 	max-width: 85%;
@@ -221,6 +244,19 @@ ul {
 	padding-left: 48px;
 }
 
+.about h3 {
+	margin-bottom: 8px;
+}
+
+.about h3 a {
+	color: #00ace6;
+	text-decoration: none;
+}
+
+.about h3 a:hover {
+	color: #bfbfbf;
+}
+
 .about .image-container {
 	float: right;
 	padding: 4px 0 28px 5%;
@@ -229,6 +265,17 @@ ul {
 
 .about .image-container img {
 	padding: 0 0 16px 0;
+}
+
+.social-icons a {
+	padding: 0 4px;
+	font-size: 32px;
+	text-decoration: none;
+	color: #808080;
+}
+
+.social-icons a:hover {
+	color: #bfbfbf;
 }
 
 /* === PUBLICATIONS === */
