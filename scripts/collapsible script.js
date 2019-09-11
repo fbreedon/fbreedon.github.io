@@ -21,8 +21,8 @@ for (i = 0; i < collapse.length; i++) {
   	});
 }
 
-// Check that the viewport is not mobile
-if (viewport >= 800) {
+// Check that the viewport is not mobile and exists
+if (viewport >= 800 && document.getElementById("default") != null) {
   // Get the collapsible with the default id and click it so it's open by default
   document.getElementById("default").click();
 }
